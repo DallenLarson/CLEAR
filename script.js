@@ -24,6 +24,18 @@ const pollingData = {
     ]
 };
 
+// Get the current date and format it
+const today = new Date();
+const formattedDate = today.toLocaleDateString("en-US", {
+    month: 'long', 
+    day: 'numeric', 
+    year: 'numeric'
+});
+
+// Display the date in the lastUpdated span
+document.getElementById("lastUpdated").textContent = formattedDate;
+
+
 function calculateThirteenKeysPrediction() {
     const positiveKeys = keysStatus.filter(key => key.status === "True").length;
     thirteenKeysPrediction = positiveKeys >= 7 ? "Trump" : "Harris";
