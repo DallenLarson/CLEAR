@@ -182,13 +182,6 @@ function calculatePrediction() {
     const winner = positiveKeys >= 7 ? "Trump" : "Harris";
     const loser = winner === "Trump" ? "Harris" : "Trump";
 
-    // Increase the size of the winner's image
-    document.getElementById(winner.toLowerCase()).style.width = "200px";
-    document.getElementById(winner.toLowerCase()).style.height = "200px";
-
-    // Keep the loser's image size unchanged
-    document.getElementById(loser.toLowerCase()).style.width = "150px";
-    document.getElementById(loser.toLowerCase()).style.height = "150px";
 
     document.getElementById("favoredCandidate").textContent = `(Polls - 1/3) Currently Favored: ${winner}`;
 
@@ -285,22 +278,42 @@ function calculateWeightedPrediction() {
     if (trumpScore > harrisScore) {
         finalPrediction = `<span style="color: red;">Trump</span>`;
         resultText = `Based on our weighted prediction, the likely winner is: ${finalPrediction} by a margin of ${roundedMargin}%`;
-        document.getElementById("trump").style.width = "200px";
-        document.getElementById("trump").style.height = "200px";
-        document.getElementById("harris").style.width = "150px";
-        document.getElementById("harris").style.height = "150px";
+        
+        // Apply larger scaling only on screens wider than 768px
+        if (window.innerWidth > 768) {
+            document.getElementById("trump").style.width = "200px";
+            document.getElementById("trump").style.height = "200px";
+            document.getElementById("harris").style.width = "150px";
+            document.getElementById("harris").style.height = "150px";
+        }else{
+            document.getElementById("trump").style.width = "100px";
+            document.getElementById("trump").style.height = "100px";
+            document.getElementById("harris").style.width = "85px";
+            document.getElementById("harris").style.height = "85px";
+        }
     } else {
         finalPrediction = `<span style="color: blue;">Harris</span>`;
         resultText = `Based on our weighted prediction, the likely winner is: ${finalPrediction} by a margin of ${roundedMargin}%`;
-        document.getElementById("harris").style.width = "200px";
-        document.getElementById("harris").style.height = "200px";
-        document.getElementById("trump").style.width = "150px";
-        document.getElementById("trump").style.height = "150px";
+
+        // Apply larger scaling only on screens wider than 768px
+        if (window.innerWidth > 768) {
+            document.getElementById("harris").style.width = "200px";
+            document.getElementById("harris").style.height = "200px";
+            document.getElementById("trump").style.width = "150px";
+            document.getElementById("trump").style.height = "150px";
+        }else{
+            
+            document.getElementById("harris").style.width = "100px";
+            document.getElementById("harris").style.height = "100px";
+            document.getElementById("trump").style.width = "85px";
+            document.getElementById("trump").style.height = "85px";
+        }
     }
 
     // Display the result in the #predictionResult element
     document.getElementById("predictionResult").innerHTML = resultText;
 }
+
 
 
 // Call the function to display the prediction
