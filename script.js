@@ -32,13 +32,13 @@ const formattedDate = today.toLocaleDateString("en-US", {
     year: 'numeric'
 });
 
-// Display the date in the lastUpdated span
-document.getElementById("lastUpdated").textContent = formattedDate;
 
 
 function calculateThirteenKeysPrediction() {
     const positiveKeys = keysStatus.filter(key => key.status === "True").length;
     thirteenKeysPrediction = positiveKeys >= 7 ? "Trump" : "Harris";
+    
+    document.getElementById("lastUpdated").textContent = formattedDate;
     displayKeysStatus();  // Update visual display of key statuses
 }
 
