@@ -249,9 +249,9 @@ calculatePrediction();
 
 // Define weights based on your given breakdown
 const weights = {
-    fivethirtyEight: 0.30, // 30%
-    thirteenKeys: 0.35, // 35%
-    economicIndicators: 0.35 // 35%
+    fivethirtyEight: 0.38, // 30%
+    thirteenKeys: 0.36, // 35%
+    economicIndicators: 0.26 // 35%
 };
 
 // Sample predictions (for demonstration purposes)
