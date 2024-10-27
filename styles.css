@@ -97,8 +97,8 @@ canvas {
     }
 
     #candidates img {
-        width: 5px;
-        height: 5px;
+        width: 0.5px;
+        height: 0.5px;
         position: relative; /* Keeps them aligned in the flex container */
     }
 
