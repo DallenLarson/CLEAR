@@ -10,9 +10,17 @@
 </head>
 <body>
     <header>
+        
+    <footer>
+    </footer>
         <img id="clearLogo" src="clear_logo.png" alt="CLEAR Logo">
         <h1>Predicting the race with data-driven insights and real-time trends.</h1>
     <p>Last Updated: <span id="lastUpdated"></span></p> <!-- Added span to hold date -->
+    
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="about.html">About CLEAR</a>
+    </nav>
     </header>
     
     <section id="prediction">
@@ -28,6 +36,7 @@
         <h2>Polling Data</h2>
         <canvas id="pollingChart"></canvas>
         <p id="favoredCandidate">Loading favored candidate...</p>
+        <p><em>Polling data provided by <a href="https://github.com/fivethirtyeight/data/tree/master/polls" target="_blank">FiveThirtyEight and ABC News</a>. These aggregated polls reflect national trends by weighing individual poll outcomes to create a representative snapshot of the current race dynamics. 538 in particular has an accuracy of 83%, weighted at 36% of CLEAR's Model</em></p>
     </section>
 
     <section id="keys">
@@ -36,7 +45,9 @@
             <!-- Placeholder for keys status -->
         </div>
         <p id="keysPrediction">Loading prediction...</p>
+        <p><em>Based on Allan Lichtman’s <a href="https://www.nytimes.com/2024/09/05/opinion/allan-lichtman-trump-harris-prediction.html" target="_blank">13 Keys Model</a>, which has historically predicted presidential outcomes with accuracy of 90%, weighted in at 38% of CLEAR's Model.</em></p>
     </section>
+    
 
 
     <section id="prediction">
@@ -56,10 +67,19 @@
     
             <p>Overall, these indicators suggest a close race with economic factors providing mixed signals. As election dynamics evolve, economic trends will be one critical measure of each party’s chances.</p>
             <p>(EI - 3/3) Currently Favored: Harris </p>
+            <p><em>Economic Indicators are weighted at 26% of CLEAR's Model.</em></p>
         </div>
     </section>    
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
+
+<footer>
+    <p>&copy; 2024 CLEAR. All rights reserved.</p>
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="about.html">About CLEAR</a>
+    </nav>
+</footer>
 </html>
