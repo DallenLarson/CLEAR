@@ -6,8 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About CLEAR</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Warning Box Styles */
+        #warningBox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid #000;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        #warningBox a {
+            color: #000;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+    <!-- Warning Box -->
+    <div id="warningBox">
+        ⚠️ This is a prediction model and could be wrong, as it is within the margin of error, which for this model is 10%.
+        <a href="https://bsky.app/profile/clearmodel.bsky.social/post/3la7mtue4rt23" target="_blank">Learn more about why this prediction may not be accurate.</a>
+    </div>
+
     <header>
         <img id="clearLogo" src="clear_logo.png" alt="CLEAR Logo">
         <h1>About CLEAR: Election Prediction Model</h1>
