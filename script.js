@@ -98,6 +98,34 @@ function processData(data) {
     updateChart();
 }
 
+function startCountdown() {
+    const nextElectionDate = new Date("November 5, 2028 00:00:00").getTime();
+    const countdownElement = document.getElementById("countdownTimer");
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeRemaining = nextElectionDate - now;
+
+        if (timeRemaining > 0) {
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+        } else {
+            countdownElement.innerHTML = "The next election cycle has begun!";
+            clearInterval(countdownInterval);
+        }
+    }
+
+    updateCountdown(); // Initial call to display the countdown immediately
+    const countdownInterval = setInterval(updateCountdown, 1000); // Update countdown every second
+}
+
+// Start the countdown when the page loads
+window.onload = startCountdown;
+
 // Initialize the chart with Chart.js
 const ctx = document.getElementById('pollingChart').getContext('2d');
 const pollingChart = new Chart(ctx, {

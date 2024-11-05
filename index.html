@@ -15,7 +15,8 @@
     </footer>
         <img id="clearLogo" src="clear_logo.png" alt="CLEAR Logo">
         <h1>Predicting the race with data-driven insights and real-time trends.</h1>
-    <p>Last Updated: <span id="lastUpdated"></span></p> <!-- Added span to hold date -->
+    <!--<p>Last Updated: <span id="lastUpdated"></span></p>  Added span to hold date -->
+    <p>Final Update: November 5th, 2024, 9:48 AM CST</p>
     
     <nav>
         <a href="index.html">Home</a> | 
@@ -24,13 +25,26 @@
     </header>
     
     <section id="prediction">
-        <h2>Election Prediction</h2>
-        <p id="predictionResult">Loading prediction...</p>
+        <h2>Our FINAL Prediction</h2>
+        <p id="predictionResult">
+            CLEAR's final projected winner for 2024 is <span style="color: blue;">Kamala Harris</span> by a margin of 3%. 💙
+        </p>
+        <p>
+            CLEAR is a new election model that combines Polling Data, the 13 Keys Method, and Economic Indicators to produce what we believe to be a highly accurate prediction. While this projected margin of victory is within 10%, meaning it’s close enough to be considered within the margin of error, our data suggests Harris as the likely winner.
+        </p>
+        <p>
+            As this is CLEAR’s first election prediction, we're excited to see how our model holds up. We'll be refining our approach based on this election cycle, aiming for even clearer insights in the future. In the meantime, remember that every vote counts—please go out and vote!
+        </p>
         <div id="candidates">
             <img id="harris" src="blue.png" alt="Harris">
             <img id="trump" src="red.png" alt="Trump">
         </div>
+        <a href="https://bsky.app/profile/clearmodel.bsky.social/post/3la7kculnzk2n" target="_blank">
+            <img src="FinalPred.png" alt="Final Prediction Graphic" style="max-width:100%; margin-top: 20px;">
+        </a>
     </section>
+    
+    
 
     <section id="polling">
         <h2>Polling Data</h2>
@@ -73,6 +87,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
+
+
+    <section id="countdown">
+        <h2>Countdown to the Next Election Cycle</h2>
+        <p>Once the winner is confirmed, this website will shut down and start preparing for the next election cycle. The countdown below marks the time remaining until the next election day:</p>
+        <p id="countdownTimer">Loading countdown...</p>
+    </section>
 </body>
 
 <footer>
